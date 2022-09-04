@@ -27,7 +27,7 @@ router.register(r'products', views.ProductsViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    # path('api/', include('products.urls', namespace='products')),
+    path('api/', include('products.urls', namespace='products')),
     path('login/', token_obtain_pair),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
